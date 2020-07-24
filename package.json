@@ -1,0 +1,15 @@
+{
+    "name": "webchat",
+    "version": "0.1.0",
+    "dependencies": {
+        "body-parser": "~1.10.1",
+        "cookie-session": "^1.4.0",
+        "ejs": "~2.1.4",
+        "express": "^4.17.1",
+        "fs": "0.0.1-security",
+        "socket.io": "2.3.0",
+        "axios": "0.19.2"
+    },
+    "author": "nicolas stas nicola.stas@edu.devinci.fr",
+    "description": "A very basic to do list manager"
+}

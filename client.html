@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel = "stylesheet"
+            type = "text/css"
+            href = "index.css" />
+        <title>Socket.io</title>
+    </head>
+    
+    <body class="bakc" id="body">
+        <div class="space" id="space"></div>
+            <div class="big">
+                <div class ="centerer title">Welcome to the futur of webchat </div>
+                <div class="mainbox" id = "themainbox"></div>
+                <input type="text" id="msger" name="msger" value="press enter to send top secret data" class="centerer"/>
+            </div>
+        
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io.connect('http://localhost:8080');
+            let typer = 0.0;
+            socket.on('rmsgs',function(message){
+                // alert(message);
+                if(themainbox.childElementCount>13){
+                    themainbox.removeChild(themainbox.firstChild);
+                }
+                var newp = document.createElement('div');
+                newp.innerHTML=message;
+                newp.className='msgs';
+                themainbox.appendChild(newp);
+            });
+            $(msger).on("keyup", function(e) {
+            if (e.keyCode == 13 && msger.value!="") {
+                socket.emit('msg',msger.value);
+                msger.value="";
+            }
+            typer+=0.02
+            if(typer>1){
+                typer=1;
+            }
+            document.getElementById('space').style.opacity="typer"
+            });
+
+            function decrementer(){
+                if(typer>0.1){
+                    typer-=0.1;
+                } else{
+                    typer=0;
+                }
+                document.getElementById('space').style.opacity=typer;
+            }
+            setInterval(decrementer, 500);
+        </script>
+    </body>    
+<html/>
