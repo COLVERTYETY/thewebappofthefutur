@@ -8,7 +8,7 @@
         "express": "^4.17.1",
         "fs": "0.0.1-security",
         "socket.io": "2.3.0",
-        "axios": "0.19.2"
+        "axios": "0.21.1"
     },
     "author": "nicolas stas nicola.stas@edu.devinci.fr",
     "description": "A very basic to do list manager"
