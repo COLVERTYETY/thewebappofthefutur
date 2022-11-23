@@ -7,7 +7,7 @@
         "ejs": "~2.5.5",
         "express": "^4.17.1",
         "fs": "0.0.1-security",
-        "socket.io": "2.3.0",
+        "socket.io": "2.5.0",
         "axios": "0.19.2"
     },
     "author": "nicolas stas nicola.stas@edu.devinci.fr",
