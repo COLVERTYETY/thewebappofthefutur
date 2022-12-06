@@ -2,10 +2,10 @@
     "name": "webchat",
     "version": "0.1.0",
     "dependencies": {
-        "body-parser": "~1.10.1",
+        "body-parser": "~1.20.1",
         "cookie-session": "^1.4.0",
         "ejs": "~2.5.5",
-        "express": "^4.17.1",
+        "express": "^4.18.2",
         "fs": "0.0.1-security",
         "socket.io": "2.3.0",
         "axios": "0.19.2"
